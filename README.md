@@ -28,9 +28,9 @@
   В качестве ответа в репозиторий шаблона с решением добавьте скриншоты с настройками раннера в проекте.
 
 ### Решение 1
-screenshot
+![](https://github.com/smyity/7.7_HomeWork_GitLab/blob/main/pic/SMK058.PNG)
 
-screenshot
+![](https://github.com/smyity/7.7_HomeWork_GitLab/blob/main/pic/SMK060.PNG)
 
 ### Задание 2
 
@@ -69,9 +69,7 @@ build:
   - task7.7
 ````
 
-screenshot
-
-screenshot
+![](https://github.com/smyity/7.7_HomeWork_GitLab/blob/main/pic/SMK078.PNG)
 
 ### Задание 3
 
@@ -110,7 +108,7 @@ build:
  needs: []
 ````
 
-screenshot
+![](https://github.com/smyity/7.7_HomeWork_GitLab/blob/main/pic/SMK080.PNG)
 
 * тесты запускаются только при изменении файлов с расширением *.go.
 
@@ -142,4 +140,4 @@ build:
   needs: []
 ````
 
-screenshot
+![](https://github.com/smyity/7.7_HomeWork_GitLab/blob/main/pic/SMK082.png)
