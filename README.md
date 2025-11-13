@@ -29,6 +29,7 @@
 
 ### Решение 1
 screenshot
+
 screenshot
 
 ### Задание 2
@@ -43,3 +44,102 @@ screenshot
  * файл gitlab-ci.yml для своего проекта или вставьте код в соответствующее поле в шаблоне; 
  * скриншоты с успешно собранными сборками.
  
+### Решение 2
+
+*.gitlab-ci.yml*
+````yaml
+stages:
+ - test
+ - build
+
+test:
+ stage: test
+ image: golang:1.17
+ script:
+  - go test .
+ tags:
+  - task7.7
+
+build:
+ stage: build
+ image: docker:latest
+ script:
+  - docker build .
+ tags:
+  - task7.7
+````
+
+screenshot
+
+screenshot
+
+### Задание 3
+
+Измените CI так, чтобы:
+
+ - этап сборки запускался сразу, не дожидаясь результатов тестов;
+ - тесты запускались только при изменении файлов с расширением *.go.
+
+В качестве ответа добавьте в шаблон с решением файл gitlab-ci.yml своего проекта или вставьте код в соответсвующее поле в шаблоне.
+
+### Решение 3
+
+* сборка запускается сразу, не дожидаясь результатов тестов.
+
+*.gitlab-ci.yml*
+````yaml
+stages:
+ - test
+ - build
+
+test:
+ stage: test
+ image: golang:1.17
+ script:
+  - go test .
+ tags:
+  - task7.7
+
+build:
+ stage: build
+ image: docker:latest
+ script:
+  - docker build .
+ tags:
+  - task7.7
+ needs: []
+````
+
+screenshot
+
+* тесты запускаются только при изменении файлов с расширением *.go.
+
+*.gitlab-ci.yml*
+````yaml
+stages:
+  - test
+  - build
+
+test:
+  stage: test
+  image: golang:1.17
+  script:
+   - go test .
+  tags:
+   - task7.7
+  rules:
+    - changes: # условия при которых будет запускаться test
+      - "*.go" # какие должны быть изменения
+    - when: never # если условие changes не выполняется, то задача не запускается
+
+build:
+  stage: build
+  image: docker:latest
+  script:
+   - docker build .
+  tags:
+   - task7.7
+  needs: []
+````
+
+screenshot
