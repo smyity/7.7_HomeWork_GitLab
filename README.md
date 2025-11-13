@@ -140,4 +140,4 @@ build:
   needs: []
 ````
 
-![](https://github.com/smyity/7.7_HomeWork_GitLab/blob/main/pic/SMK082.png)
+![](https://github.com/smyity/7.7_HomeWork_GitLab/blob/main/pic/SMK083.png)
