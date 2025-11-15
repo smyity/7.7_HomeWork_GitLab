@@ -10,12 +10,24 @@
     * Ввести название ключа (*ssh-key-1759501063847.pub*)
     * Вставить содержимое ключа
     * **Add SSH key**
-2. Запустить агента: `eval "$(ssh-agent -s)"`
-3. Проверить соединение: `ssh -T git@github.com`
-4. Изменить адрес с https формата на SSH: `git remote set-url origin git@github.com:smyity/7.7_HomeWork_GitLab.git`
+2. Запустить агента: 
+   ````
+   eval "$(ssh-agent -s)"
+   ````
+4. Проверить соединение:
+   ````
+   ssh -T git@github.com
+   ````
+5. Изменить адрес с https формата на SSH:
+   ````
+   git remote set-url origin git@github.com:smyity/7.7_HomeWork_GitLab.git
+   ````
     * **smyity** - имя пользователя
     * **7.7_HomeWork_GitLab** - рабочая директория
-5. Теперь push выполняется без пароля: `git push origin main`
+6. Теперь push выполняется без пароля:
+   ````
+   git push origin main
+   ````
 
 # Домашнее задание к занятию "GitLab"
 
